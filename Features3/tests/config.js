@@ -18,7 +18,7 @@ After(async function () {
 BeforeAll(async function () {
   console.log("This is executed in the begining of login feature");
   global.browser = await chromium.launch({
-    headless: false,
+    headless: true,
     slowMo: 200,
     channel: "chrome",
   });
