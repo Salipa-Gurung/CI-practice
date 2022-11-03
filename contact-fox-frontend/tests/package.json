@@ -1,0 +1,19 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "cucumber-js --require ./e2e/config.js --require ./e2e/stepDefinitions/loginContext.js --format @cucumber/pretty-formatter"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.6.0"
+  },
+  "dependencies": {
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.27.1",
+    "playwright": "^1.27.1"
+  }
+}
