@@ -14,7 +14,7 @@ Before(async function () {
   global.page = await context.newPage();
 });
 
-setDefaultTimeout(6000);
+setDefaultTimeout(60000);
 
 After(async function () {
   console.log("This is executed after every scenario");
