@@ -1,0 +1,20 @@
+{
+  "name": "tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:e2e": "cucumber-js --require ./config.js --require ./stepDefinitions --format @cucumber/pretty-formatter"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.6.0"
+  },
+  "dependencies": {
+    "@cucumber/pretty-formatter": "^1.0.0",
+    "@playwright/test": "^1.27.1",
+    "mongoose": "^6.6.5",
+    "playwright": "^1.27.1"
+  }
+}
