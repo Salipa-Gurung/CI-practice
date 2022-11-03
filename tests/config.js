@@ -1,4 +1,10 @@
-const { Before, BeforeAll, After, AfterAll } = require("@cucumber/cucumber");
+const {
+  Before,
+  BeforeAll,
+  After,
+  AfterAll,
+  setDefaultTimeout,
+} = require("@cucumber/cucumber");
 const { chromium } = require("playwright");
 const clearDatabase = require("./dbCleanUp");
 
@@ -7,6 +13,8 @@ Before(async function () {
   global.context = await browser.newContext();
   global.page = await context.newPage();
 });
+
+setDefaultTimeout(5000);
 
 After(async function () {
   console.log("This is executed after every scenario");
