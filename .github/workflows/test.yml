@@ -18,3 +18,21 @@ jobs:
 
       - name: Run something here
         run: node test.js
+
+      - name: Start backend
+        run: |
+          cd contact-fox-backend
+          npm i
+          npm start &
+
+      - name: Start frontend
+        run: |
+          cd contact-fox-frontend
+          npm i 
+          npm start &
+
+      - name: Run test
+        run: |
+          # cd Features3/tests
+          npm i
+          npm run test:e2e ./Features3/tests/features/login.feature
