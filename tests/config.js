@@ -14,7 +14,7 @@ Before(async function () {
   global.page = await context.newPage();
 });
 
-setDefaultTimeout(5000);
+setDefaultTimeout(6000);
 
 After(async function () {
   console.log("This is executed after every scenario");
@@ -26,7 +26,7 @@ After(async function () {
 BeforeAll(async function () {
   console.log("This is executed in the begining of login feature");
   global.browser = await chromium.launch({
-    headless: true,
+    headless: false,
     slowMo: 200,
     channel: "chrome",
   });
