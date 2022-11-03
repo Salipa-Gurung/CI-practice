@@ -33,6 +33,6 @@ jobs:
 
       - name: Run test
         run: |
-          cd Features3/tests
+          cd tests
           npm i
           npm run test:e2e ./features/userRegistration.feature
