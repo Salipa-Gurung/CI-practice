@@ -49,10 +49,10 @@ const Login = (props) => {
         <span className="text-primary">Login</span> Account
       </h1>
       <form onSubmit={onSubmit}>
-        <div className="form-group">
+        {/* <div className="form-group">
           <label htmlFor="email">Email Address</label>
           <input type="email" name="email" value={email} onChange={onChange} />
-        </div>
+        </div> */}
         <div className="form-group">
           <label htmlFor="password">Password</label>
           <input

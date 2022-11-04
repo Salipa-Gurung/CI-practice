@@ -53,7 +53,7 @@ router.post(
       // Creates the payload.
       const payload = {
         user: {
-          id: user.i
+          id: user.i,
         },
       };
       // Signs the token.
