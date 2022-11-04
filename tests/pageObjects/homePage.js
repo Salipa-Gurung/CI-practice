@@ -8,7 +8,7 @@ class HomePage {
 
   async navigateToHomePage() {
     const logoutBtnLocator = await page.locator(this.logoutBtnSelector);
-    await expect(logoutBtnLocator).toBeVisible();
+    await expect(page.locator(logoutBtnLocator)).toBeVisible();
     await expect(page.locator(this.greetingSelector)).toContainText("Hello, ");
   }
 
