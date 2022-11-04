@@ -21,7 +21,7 @@ class RegisterPage {
     await page.fill(this.passwordSelector, data.password);
     await page.fill(this.confirmPassword, data.confirmPassword);
     await page.click(this.registerBtnSelector);
-    await expect(page.locator(this.alertMsgSelector)).toBeVisible();
+    // await expect(page.locator(this.alertMsgSelector)).toBeVisible();
   }
 }
 module.exports = { RegisterPage };
