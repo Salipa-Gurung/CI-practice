@@ -40,4 +40,4 @@ jobs:
         run: |
           cd tests
           npm i
-          npm run test:e2e ./features/userRegistration.feature
+          npm run test:e2e ./features/userRegistration.feature:9
