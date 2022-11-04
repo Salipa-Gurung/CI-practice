@@ -1,4 +1,5 @@
 const { expect } = require("@playwright/test");
+const axios = require("axios");
 
 class RegisterPage {
   constructor() {
@@ -20,7 +21,10 @@ class RegisterPage {
     await page.fill(this.emailSelector, data.email);
     await page.fill(this.passwordSelector, data.password);
     await page.fill(this.confirmPassword, data.confirmPassword);
+    let res = await axios.get("http://localhost:5000");
+    console.log("This is the reponse from server: " + res.data);
     await page.click(this.registerBtnSelector);
+
     // await expect(page.locator(this.alertMsgSelector)).toBeVisible();
   }
 }
