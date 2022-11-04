@@ -1,3 +1,5 @@
+const { expect } = require("@playwright/test");
+
 class RegisterPage {
   constructor() {
     this.registerPageURL = "http://localhost:3000/register";
@@ -19,6 +21,7 @@ class RegisterPage {
     await page.fill(this.passwordSelector, data.password);
     await page.fill(this.confirmPassword, data.confirmPassword);
     await page.click(this.registerBtnSelector);
+    await expect(this.alertMsgSelector).toBeVisible();
   }
 }
 module.exports = { RegisterPage };

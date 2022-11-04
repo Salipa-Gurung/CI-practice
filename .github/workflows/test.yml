@@ -24,16 +24,16 @@ jobs:
         with:
           mongodb-version: "5.0"
 
-      - name: Start frontend
-        run: |
-          cd contact-fox-frontend
-          npm i 
-          npm start &
-
       - name: Start backend
         run: |
           cd contact-fox-backend
           npm i
+          npm start &
+
+      - name: Start frontend
+        run: |
+          cd contact-fox-frontend
+          npm i 
           npm start &
 
       - name: Run test
