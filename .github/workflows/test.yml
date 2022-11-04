@@ -19,6 +19,11 @@ jobs:
       - name: Run something here
         run: node test.js
 
+      - name: Start MongoDB
+        uses: supercharge/mongodb-github-action@1.8.0
+        with:
+        mongodb-version: "5.0"
+
       - name: Start backend
         run: |
           cd contact-fox-backend
